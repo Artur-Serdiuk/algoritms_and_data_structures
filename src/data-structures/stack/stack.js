@@ -5,7 +5,7 @@ class Node {
   }
 }
 
-class Stack {
+export default class Stack {
   constructor() {
     this.head = this.tail = null;
     this.size = 0;
@@ -13,7 +13,7 @@ class Stack {
 
   print() {
     const res = [];
-    let cur = this.head;
+    let cur = this.tail;
     while (cur) {
       res.push(cur.val);
       cur = cur.prev;
@@ -41,14 +41,14 @@ class Stack {
     this.tail = node;
   }
 
-  pull() {
+  pop() {
     if (!this.tail) return null;
 
     this.size--;
 
     const t = this.tail;
 
-    this.tail = this.tail.prev;
+    this.tail = t.prev;
 
     if (!this.tail) {
       this.head = null;

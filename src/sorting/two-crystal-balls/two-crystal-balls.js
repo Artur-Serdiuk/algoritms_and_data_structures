@@ -1,4 +1,4 @@
-function twoCrystalBalls(arr) {
+export default function twoCrystalBalls(arr) {
   const jumpSize = Math.floor(Math.sqrt(arr.length));
 
   let i = jumpSize;
@@ -15,21 +15,3 @@ function twoCrystalBalls(arr) {
 
   return -1;
 }
-
-const data = [
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  true,
-  true,
-  true,
-  true,
-  true,
-];
-console.log(twoCrystalBalls(data));

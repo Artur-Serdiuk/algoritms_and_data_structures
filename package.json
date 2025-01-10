@@ -1,11 +1,20 @@
 {
   "name": "algoritms_and_data_structures",
   "version": "1.0.0",
+  "description": "Algorithms and data-structures implemented on JavaScript",
+  "author": "Artur Serdiuk",
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --no-warnings --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "node --no-warnings --experimental-vm-modules node_modules/jest/bin/jest.js --watch"
   },
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "engines": {
+    "node": ">=20.16.0",
+    "npm": ">=10.8.1"
+  },
+  "type": "module",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
